@@ -23,22 +23,6 @@
     overflow: visible;
 }
 
-/* Microanimação: sublinhado animado nos títulos das seções */
-.section-title::after {
-    content: '';
-    display: block;
-    width: 0;
-    height: 4px;
-    background: var(--destaque);
-    margin: 12px auto 0 auto;
-    border-radius: 2px;
-    transition: width 0.6s cubic-bezier(.77,0,.18,1);
-}
-.section-title:hover::after,
-.section-title:focus::after {
-    width: 80px;
-}
-
 /* Microanimação: fade-in nos parágrafos principais */
 .software-livre-texto {
     /* ...existing code... */
@@ -55,7 +39,7 @@
 }
 
 /* Títulos secundários (h3, h4) com cor de destaque */
-h3, h4 {
+h3{
     color: var(--texto);
     font-size: 1.2rem;
     text-transform: uppercase;
@@ -63,6 +47,15 @@ h3, h4 {
     letter-spacing: 1px;
 }
 
+ 
+
+h4 {
+    color: var(--fundo);
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
 /* Ícone ilustrativo para sessão eventos */
 /* Sessão Por que Software Livre? */
 .software-livre-texto {
@@ -105,7 +98,7 @@ h3, h4 {
 .container {
         max-width: 100vw;
         margin: 0 auto;
-        padding: 6vw 8vw;
+        padding: 3.5vw 8vw;
         text-align: center;
     }
 
@@ -435,29 +428,58 @@ h2 {
 
 .povo-section {
     background: var(--texto);
-    padding: 80px 0;
+    padding: 0;
+    align-items: center;
 }
 
 .povo-title {
-    color: var(--bg-color);
+    color: var(--marrom-claro);
     font-size: 2.6rem;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
     font-weight: 800;
-    line-height: 1.1;
+    line-height: 1.2;
+    margin: 0px 0px 30px;
 }
 
 .povo-grid {
     display: flex;
-    align-items: flex-start;
-    gap: 50px;
+    align-items: center;
+    gap: 20px;
 }
 
 .povo-video {
     display: flex;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
 }
 
+.video-placeholder {
+    background: #332824;
+    height: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px dashed var(--destaque);
+    padding: 20px;
+    text-align: center;
+}
+
+/* Estilo para o player de vídeo */
+.video-player {
+    display: flex;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+    background: #000;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+}
+
+.video-player:hover {
+    box-shadow: 0 12px 32px rgba(211, 84, 0, 0.25);
+}
 
 .apoio-section {
     background: var(--urucum);
@@ -477,21 +499,28 @@ h2 {
     gap: 20px;
     width: 100%;
     max-width: 1200px;
-    margin-top: 30px;
+    margin: 20px ;
 }
 
 .apoio-box {
     background: var(--urucum);
     border: 1px solid #f4ecd8;
-    padding: 30px;
+    padding: 35px;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
     display: grid;
     grid-template-columns: 1fr;
     gap: 15px;
     align-items: center;
-    
 }
+
+.apoio-box h4 {
+    color: var(--texto);
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 1px;
+}  
 
 .apoio-title {
     color: var(--texto);
@@ -561,6 +590,49 @@ h2 {
 }
 
 
+.plataforma-section{
+    height: 1vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background:url('./artesanatos.jpeg') center/cover;
+    position: relative;
+    width: 100%;
+    height: 100svh;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.258); /* Cor branca com 60% de opacidade */
+    background-blend-mode: lighten; /* Mistura a imagem com o fundo */
+    background-position: center;
+}
+
+.plataforma-title {
+    color: var(--texto);
+    font-size: 4.2rem;
+    font-weight: 800;
+    line-height: 1.1;
+    text-transform: uppercase;
+    margin-bottom: 1.2rem;
+
+}  
+
+.plataforma-cards-section {
+    background: var(--texto);
+    padding: 70px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.plataforma-paragrafo {
+    color: var(--fundo);
+    font-size: 1.6rem;
+    line-height: 1.8;
+    max-width: 100vw;
+    margin: 0 auto;
+    text-align: center;
+    opacity: 0.9;
+}
+
 
 .kene-icon {
     width: 80px;
@@ -612,7 +684,6 @@ h2 {
     border-radius: 50%;
     background-size: cover;
     background-position: center;
-    border: 4px solid var(--destaque);
     box-shadow: 0 8px 20px rgba(211, 84, 0, 0.2);
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     position: relative;
@@ -639,36 +710,6 @@ h2 {
 }
 
 /* Seções */
-
-.video-placeholder {
-    background: #332824;
-    height: 350px;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 1px dashed var(--destaque);
-    border-radius: 5px;
-    padding: 20px;
-    text-align: center;
-}
-
-/* Estilo para o player de vídeo */
-.video-player {
-    width: 100%;
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
-    background: #000;
-    margin-bottom: 20px;
-    transition: all 0.3s ease;
-}
-
-.video-player:hover {
-    box-shadow: 0 12px 32px rgba(211, 84, 0, 0.25);
-}
-
 
 .equipe-grid {
     display: grid;
@@ -753,9 +794,8 @@ h2 {
 
 .card,
 .pilar,
-.eventos-box,
-.arte-box {
-    background: var(--card-bg);
+.eventos-box {
+    background: var(--texto);
     padding: 30px;
     border: 1px solid #332824;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
