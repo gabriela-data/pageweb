@@ -22,17 +22,21 @@
     overflow: visible;
 }
 .apoio-imagem {
-    width: 50px;
-    height: 50px;
+    width: 90px;
+    height: 90px;
+    margin: 0 auto 10px;
+    border-radius: 50%;
     background-size: cover;
     background-position: center;
-    transition: all 0.3s ease;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     /* Inverte as cores em 100% e garante o brilho máximo */
     filter: invert(100%) brightness(200%);
+    position: relative;
+    overflow: hidden;
 }
+
 /* Microanimação: fade-in nos parágrafos principais */
 .software-livre-texto {
-    /* ...existing code... */
     opacity: 0;
     transform: translateY(24px);
     animation: fadeInUp 1.1s cubic-bezier(.77,0,.18,1) 0.2s forwards;
@@ -112,12 +116,12 @@ h4 {
 
 body {
     margin: 0;
-    background-color: var(--bg-color);
-    color: var(--texto);
+    background-color: var(--texto);
     font-family: 'Poppins', sans-serif;
     scroll-behavior: smooth;
     padding-top: 70px;
 }
+
 
 /* Container da marca ajustado para apenas a imagem */
     .section-title {
@@ -355,21 +359,20 @@ h2 {
 
 /* Hero */
 .hero {
-    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    background:url('./indigenas.jpg') center/cover;
+    background:url('./Captura\ de\ tela\ de\ 2026-02-24\ 16-15-48.png') center/cover;
     position: relative;
     width: 100%;
-    height: 100svh;
+    height: 100vh;
     overflow: hidden;
 }
 
 .hero-overlay {
     position: absolute;
     inset: 0;
-    background: rgba(0, 0, 0, 0.6);
+    background: rgba(0, 0, 0, 0.205);
 }
 .hero-content {
     position: relative;
@@ -404,6 +407,14 @@ h2 {
   font-size: 5.2rem;
   font-weight: 800;
   letter-spacing: 1px;
+}
+
+#manifesto {
+    background: var(--marrom-claro);
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .title-manifesto {
@@ -490,9 +501,8 @@ h2 {
 .apoio-section {
     position: relative;
     background: var(--urucum);
-    padding-top: 100px;
-    min-height: 300px;
-    padding: 20px;
+    min-height: 30px;
+    padding: 10px;
     border: 1px solid #332824;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
@@ -501,10 +511,11 @@ h2 {
     align-items: center;  
 }
 
+
 .apoio-options {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 20px;
+    gap: 200px;
     width: 100%;
     max-width: 1200px;
     margin: 20px ;
@@ -528,16 +539,121 @@ h2 {
   background-image: linear-gradient(135deg, #2c3e50 25%, transparent 25%), linear-gradient(225deg, #2c3e50 25%, transparent 25%);
   background-position: 0 0;
 }
+
+
+
+/* Container da Grid */
+.cards-grid-movimento-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  perspective: 1000px;
+}
+
+/* O Card Principal */
+.card-movimento-card {
+  height: 400px; /* Ajuste a altura conforme desejar */
+  background: transparent;
+  border: none;
+  text-decoration: none;
+}
+
+
+
+/* Container que gira */
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  transform-style: preserve-3d;
+}
+
+.card-movimento-card:hover .card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Faces do Card */
+.card-front, .card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 20px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  background-color: #1a2e1a; /* Cor de fundo caso a imagem falhe */
+}
+
+/* Estilo da Frente */
+.card-front .card-image {
+  flex: 1;
+  width: 100%;
+}
+
+.card-front .slide {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+.card-front h3 {
+  padding: 20px;
+  color: white;
+  text-align: center;
+  margin: 0;
+  font-size: 1.2rem;
+  background-color: #0d1a0d;
+}
+
+/* Estilo do Verso */
+.card-back {
+  transform: rotateY(180deg);
+  background-color: #0d1a0d;
+  color: white;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  text-align: center;
+}
+
+.card-back p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin: 15px 0;
+}
+
+.btn-saiba {
+  padding: 10px 25px;
+  background-color: #ffffff;
+  color: #1a2e1a;
+  text-decoration: none;
+  border-radius: 50px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn-saiba:hover {
+  background-color: #e0e0e0;
+  transform: scale(1.05);
+}
+
+
+
+
 .apoio-box {
     background: var(--urucum);
     border: 1px solid #f4ecd8;
-    padding: 35px;
+    padding: 10px;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
     display: grid;
     grid-template-columns: 1fr;
     gap: 15px;
     align-items: center;
+    width: 407.312px;
 }
 
 .apoio-box h4 {
@@ -610,20 +726,12 @@ h2 {
     min-height: 50px;
     position: relative;
 }
-.card-movimento-card{
-    background: #242f15;
-    border-radius: 10px;
-    padding: 25px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
 
-}
 .cards-grid-movimento-grid h3{
 
     color: var(--texto);
     font-size: 1.7rem;
-    margin-bottom: 15px;
+    margin-bottom: 0px;
     line-height: 1.2;
     font-weight: 500;
     letter-spacing: 2px;
@@ -678,7 +786,7 @@ h2 {
 }
 
 .software-livre-title {
-    color: var(--texto);
+    color: var(--fundo);
     text-transform: uppercase;
     letter-spacing: 2px;
     margin-bottom: 40px;
@@ -689,7 +797,7 @@ h2 {
 }
 
 .pesquisa-extensao-title {
-    color: var(--texto);
+    color: var(--fundo);
     text-transform: uppercase;
     letter-spacing: 2px;
     margin-bottom: 40px;
@@ -702,16 +810,16 @@ h2 {
 .software-livre-texto, .pesquisa-extensao-texto {
     text-align: justify;
     line-height: 1.9;
-    margin: 0 auto 30px;
+    margin: 0 auto;
     max-width: 900px;
     word-spacing: 0.08em;
     font-family: 'Poppins', sans-serif;
     font-size: 1.22rem; 
-    color: var(--texto);
+    color: var(--fundo);
 }
 
 .eventos-title {
-    color: var(--texto);
+    color: var(--fundo);
     text-transform: uppercase;
     letter-spacing: 2px;
     margin-bottom: 40px;
