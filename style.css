@@ -16,6 +16,21 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+.divisor-pincelada {
+    position: absolute; 
+    width: 120%;
+    overflow: hidden;
+    line-height: 0;
+    /* Faz a pincelada "subir" um pouco para cobrir a linha divisória */
+    transform: translateY(-100%); 
+}
+.divisor-pincelada img {
+    width: 100%;
+    height: 10%;
+    display: block;
+}
+
 .section-title {
     /* ...existing code... */
     position: relative;
@@ -72,7 +87,6 @@ h4 {
 .software-livre-texto {
     text-align: justify;
     line-height: 1.9;
-    margin: 0 auto 30px;
     max-width: 900px;
     word-spacing: 0.08em;
     font-family: 'Poppins', sans-serif;
@@ -109,7 +123,7 @@ h4 {
 .container {
         max-width: 100vw;
         margin: 0 auto;
-        padding: 4vw 6vw;
+        padding: 5vw 6vw;
         text-align: center;
     }
 
@@ -362,7 +376,7 @@ h2 {
     display: flex;
     align-items: center;
     justify-content: center;
-    background:url('./Captura\ de\ tela\ de\ 2026-02-24\ 16-15-48.png') center/cover;
+    background:url('./Rio4.jpg') center/cover;
     position: relative;
     width: 100%;
     height: 100vh;
@@ -370,7 +384,7 @@ h2 {
 }
 
 .hero-overlay {
-    position: absolute;
+    position: relative;
     inset: 0;
     background: rgba(0, 0, 0, 0.205);
 }
@@ -379,9 +393,8 @@ h2 {
     color: white;
     text-align: center;
     z-index: 1;
-    padding: 0 20px;
     max-width: 1200px;
-    padding: 0 24px;
+    padding: 0;
 }
 
 .hero-title {
@@ -483,9 +496,10 @@ h2 {
 
 /* Estilo para o player de vídeo */
 .video-player {
+    text-align: center;
     display: flex;
-    width: 100%;
     max-width: 100%;
+    width: 1200px;
     height: auto;
     border-radius: 8px;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
@@ -498,11 +512,20 @@ h2 {
     box-shadow: 0 12px 32px rgba(211, 84, 0, 0.25);
 }
 
+.container-apoio{
+    max-width: 100vw;
+    margin: 0 auto;
+    padding: 1vw 6vw;
+    text-align: center; 
+}
+
 .apoio-section {
     position: relative;
     background: var(--urucum);
     min-height: 30px;
     padding: 10px;
+    padding-top: 0px;
+    padding-bottom: 0px;
     border: 1px solid #332824;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
@@ -664,6 +687,14 @@ h2 {
     letter-spacing: 1px;
 }  
 
+.apoio-box p {
+    color: var(--texto);
+    font-size: 1rem;
+    line-height: 1.5;
+    text-align: center;
+    margin: 0;
+}   
+
 .apoio-title {
     color: var(--texto);
     font-size: 2.6rem;
@@ -811,15 +842,15 @@ h2 {
     text-align: justify;
     line-height: 1.9;
     margin: 0 auto;
-    max-width: 900px;
+    max-width: 100vw;
     word-spacing: 0.08em;
     font-family: 'Poppins', sans-serif;
-    font-size: 1.22rem; 
+    font-size: 1.6rem; 
     color: var(--fundo);
 }
 
 .eventos-title {
-    color: var(--fundo);
+    color: var(--urucum);
     text-transform: uppercase;
     letter-spacing: 2px;
     margin-bottom: 40px;
@@ -1169,7 +1200,7 @@ h2 {
 
 .equipe-section {
     background: var(--bg-color);
-    padding-top: 100px;
+    padding-top: 0px;
     padding-bottom: 100px;
 }
 
@@ -1547,7 +1578,7 @@ footer .container {
     gap: 20px;
 }
 .eventos-header h2 {
-    color: var(--texto);
+    color: var(--urucum);
     text-transform: uppercase;
     letter-spacing: 2px;
     font-size: 2.6rem;
