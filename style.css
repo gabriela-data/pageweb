@@ -19,7 +19,7 @@
 
 .divisor-pincelada {
     position: absolute; 
-    width: 120%;
+    width: 100%;
     overflow: hidden;
     line-height: 0;
     /* Faz a pincelada "subir" um pouco para cobrir a linha divisória */
@@ -27,7 +27,7 @@
 }
 .divisor-pincelada img {
     width: 100%;
-    height: 10%;
+    height: 12%;
     display: block;
 }
 
@@ -376,7 +376,7 @@ h2 {
     display: flex;
     align-items: center;
     justify-content: center;
-    background:url('./Rio4.jpg') center/cover;
+    background:url('./Rio5.jpg') center/cover;
     position: relative;
     width: 100%;
     height: 100vh;
