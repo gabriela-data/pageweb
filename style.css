@@ -893,6 +893,85 @@ h2 {
     transform: translateY(0);
 }
 
+
+/* Container dos cards para alinhar lado a lado */
+.pilares-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap; /* Garante que quebre linha em telas pequenas */
+    margin-top: 40px;
+}
+
+/* O card principal (A moldura) */
+.pilar {
+    background-color: transparent;
+    width: 250px;
+    height: 300px;
+    perspective: 1000px; /* Cria o efeito de profundidade 3D */
+}
+
+/* O corpo que gira */
+.pilar-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    transform-style: preserve-3d;
+    cursor: pointer;
+}
+
+/* Gatilho do giro */
+.pilar:hover .pilar-inner {
+    transform: rotateY(180deg);
+}
+
+/* Configuração comum para Frente e Verso */
+.pilar-front, .pilar-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Esconde a face oposta */
+    backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+/* Estilo da Frente */
+.pilar-front {
+    background-color: rgba(255, 255, 255, 0.05); /* Leve transparência */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Estilo do Verso */
+.pilar-back {
+    background-color: var(--texto); /* Cor de fundo que você já usa */
+    color: #1a1412;
+    transform: rotateY(180deg); /* Começa de costas */
+    border: 1px dashed var(--destaque);
+}
+
+/* Ajuste das imagens circulares na frente */
+.pilar-imagem {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 15px;
+}
+
+.pilar-back p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
 /* Delay escalonado para itens em grid (opcional, para um efeito mais fluido) */
 .pilar:nth-child(2) { transition-delay: 0.2s; }
 .pilar:nth-child(3) { transition-delay: 0.4s; }
@@ -1053,7 +1132,6 @@ h2 {
 }
 
 .card,
-.pilar,
 .eventos-box {
     background: var(--texto);
     padding: 30px;
