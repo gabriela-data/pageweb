@@ -63,26 +63,43 @@
     </div>
   </section>
 
-  <section id="povo" class="povo-section">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+<section id="povo" class="povo-section">
     <div class="container">
       <h2 class="povo-title">Povo Huni Kuī</h2>
-      <div class="povo-grid">
-        <div class="povo-video">
-          <video class="video-player" controls>
-            <source src="./videos/VideoIbã.mp4" type="video/mp4">
-            <!-- Adicione outros formatos aqui conforme necessário -->
-            <!-- <source src="./video.webm" type="video/webm">
-            <source src="./video.ogv" type="video/ogg"> -->
-            Seu navegador não suporta o elemento de vídeo. Por favor, atualize seu navegador.
-          </video>
-          <!-- Espaço para adicionar mais vídeos em sequência -->
-          <!-- <video class="video-player" controls>
-            <source src="./outro-video.mp4" type="video/mp4">
-          </video> -->
+      
+      <div class="swiper povo-carousel">
+        <div class="swiper-wrapper">
+          
+          <div class="swiper-slide">
+            <video class="video-player" controls>
+              <source src="./videos/VideoIbã.mp4" type="video/mp4">
+              Seu navegador não suporta o elemento de vídeo.
+            </video>
+          </div>
+
+          <div class="swiper-slide">
+            <video class="video-player" controls>
+              <source src="./videos/gravacaoTela.mp4" type="video/mp4">
+            </video>
+          </div>
+
+          <div class="swiper-slide">
+            <video class="video-player" controls>
+              <source src="./videos/VideoIbã.mp4" type="video/mp4">
+            </video>
+          </div>
+
         </div>
+
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        
+        <div class="swiper-pagination"></div>
       </div>
     </div>
-  </section>
+</section>
 
 
 
@@ -643,6 +660,35 @@
     </div>
   </footer>
   <script src="script.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<script>
+  const swiper = new Swiper('.povo-carousel', {
+    // Configurações
+    slidesPerView: 1,
+    spaceBetween: 30,
+    loop: true, // Permite navegação infinita
+    
+    // Paginação e Navegação
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    
+    // Pausa o vídeo ao trocar de slide (Opcional, mas recomendado)
+    on: {
+      slideChange: function () {
+        const videos = document.querySelectorAll('video');
+        videos.forEach(video => video.pause());
+      },
+    },
+  });
+</script>
 </body>
 
 </html>

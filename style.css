@@ -477,39 +477,33 @@ h2 {
     gap: 20px;
 }
 
-.povo-video {
+/* Ajuste no container do carrossel */
+.povo-carousel {
+    width: 100%;
+    max-width: 1200px;
+    padding-bottom: 50px; /* Espaço para as bolinhas da paginação */
+}
+
+.swiper-slide {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.video-placeholder {
-    background: #332824;
-    height: 350px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 1px dashed var(--destaque);
-    padding: 20px;
-    text-align: center;
-}
-
-/* Estilo para o player de vídeo */
+/* Garante que o vídeo se adapte ao slide */
 .video-player {
-    text-align: center;
-    display: flex;
-    max-width: 100%;
-    width: 1200px;
+    width: 100%;
     height: auto;
-    border-radius: 8px;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
-    background: #000;
-    margin-bottom: 20px;
-    transition: all 0.3s ease;
+    margin-bottom: 0; /* Removido para centralizar no slide */
 }
 
-.video-player:hover {
-    box-shadow: 0 12px 32px rgba(211, 84, 0, 0.25);
+/* Personalizando as setas com a sua variável --destaque */
+.swiper-button-next, .swiper-button-prev {
+    color: var(--destaque, #d35400);
+}
+
+.swiper-pagination-bullet-active {
+    background: var(--destaque, #d35400);
 }
 
 .container-apoio{
