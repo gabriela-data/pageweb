@@ -1085,22 +1085,77 @@ h2 {
 }
 
 .movimento-carousel-wrapper {
+    position: relative;
     display: flex;
     align-items: center;
-    gap: 20px;
-    justify-content: center;
-    margin-bottom: 40px;
-    margin-top: 40px;
+    gap: 10px;
 }
 
 .cards-grid.movimento-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
-    flex: 1;
-    min-height: 520px;
-    position: relative;
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    gap: 20px;
+    padding: 20px 5px;
+    scrollbar-width: none; /* Esconde barra no Firefox */
 }
+
+.cards-grid-movimento-grid::-webkit-scrollbar {
+    display: none; /* Esconde barra no Chrome/Safari */
+}
+
+/* Garante que cada card mantenha seu tamanho e trave no scroll */
+.card-movimento-card {
+    flex: 0 0 calc(33.333% - 20px); /* Mostra 3 cards por vez no desktop */
+    scroll-snap-align: start;
+    perspective: 1000px; /* Mantém o efeito 3D */
+}
+
+/* Responsividade: 2 cards em tablets, 1 em celulares */
+@media (max-width: 992px) {
+    .card-movimento-card { flex: 0 0 calc(50% - 20px); }
+}
+@media (max-width: 600px) {
+    .card-movimento-card { flex: 0 0 100%; }
+}
+
+/* Estilo das Bolinhas de Paginação */
+.movimento-pagination {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    background: #ccc;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.dot.active {
+    background: var(--destaque, #d35400);
+    transform: scale(1.2);
+}
+
+/* Botões laterais */
+.movimento-btn {
+    background: var(--destaque, --urucum);
+    color: white;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 10;
+    transition: 0.3s;
+}
+
+.movimento-btn:hover { background: #a04000; }
 
 .movimento-card.hidden {
     display: none;

@@ -176,3 +176,38 @@ if (ctaButton) {
         ctaButton.classList.remove('hovered');
     });
 }
+document.addEventListener("DOMContentLoaded", function() {
+    const grid = document.getElementById('movimentoGrid');
+    const prevBtn = document.querySelector('.movimento-btn-prev');
+    const nextBtn = document.querySelector('.movimento-btn-next');
+    const pagination = document.getElementById('movimentoPagination');
+    const cards = document.querySelectorAll('.card-movimento-card');
+
+    // Criar bolinhas dinamicamente
+    cards.forEach((_, i) => {
+        const dot = document.createElement('div');
+        dot.classList.add('dot');
+        if (i === 0) dot.classList.add('active');
+        dot.addEventListener('click', () => {
+            grid.scrollTo({ left: cards[i].offsetLeft - grid.offsetLeft, behavior: 'smooth' });
+        });
+        pagination.appendChild(dot);
+    });
+
+    // Atualizar bolinha ativa no scroll
+    grid.addEventListener('scroll', () => {
+        const index = Math.round(grid.scrollLeft / cards[0].offsetWidth);
+        document.querySelectorAll('.dot').forEach((dot, i) => {
+            dot.classList.toggle('active', i === index);
+        });
+    });
+
+    // Ação dos botões
+    nextBtn.addEventListener('click', () => {
+        grid.scrollBy({ left: cards[0].offsetWidth + 20, behavior: 'smooth' });
+    });
+
+    prevBtn.addEventListener('click', () => {
+        grid.scrollBy({ left: -(cards[0].offsetWidth + 20), behavior: 'smooth' });
+    });
+});
