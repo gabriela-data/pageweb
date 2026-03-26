@@ -332,6 +332,7 @@ h2 {
         display: block !important;
         position: relative;
         z-index: 1001; 
+        
     }
 }
 
@@ -348,6 +349,7 @@ h2 {
     cursor: pointer;
     color: var(--urucum);
     order: 3;
+    background-color: var(--marrom-claro);
 }
 .btn-apoie:hover {
     transform: scale(1.05);
