@@ -27,7 +27,7 @@ body {
 
 header {
     padding: 0;
-    height: 80px; /* Altura fixa da barra escura */
+    height: 70px; /* Altura fixa da barra escura */
     width: 100%;
     top: 0;
     position: fixed;
