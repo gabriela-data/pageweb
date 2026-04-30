@@ -8,640 +8,366 @@
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-  <link rel="shortcut icon" type="image/x-icon" href="./Fotos/nacao yuxibu.png">
+  <link rel="shortcut icon" type="image/x-icon" href="./Fotos/nacao-yuxibu.png">
 </head>
 
 <body>
-
-  <header>
-    <nav>
-      <div class="brand-container">
-        <img src="./Fotos/nacao yuxibu.png" alt="Logo Nação Yuxibu" class="header-logo">
+  <header class="cabecalho">
+    <nav class="navegacao">
+      <div class="container-marca">
+        <img src="./Fotos/nacao-yuxibu.png" alt="Logo Nação Yuxibu" class="logo-cabecalho">
       </div>
-      <button class="menu-toggle" type="button" aria-label="Abrir menu">☰</button>
-      <ul class="nav-links">
+      <button class="botao-menu" type="button" aria-label="Abrir menu">☰</button>
+      <ul class="links-navegacao">
         <li><a href="#hero">Home</a></li>
         <li><a href="#manifesto">Manifesto</a></li>
         <li><a href="#povo">Povo Huni Kuī</a></li>
         <li><a href="#movimento">O Coletivo</a></li>
         <li><a href="#plataforma">A Plataforma</a></li>
         <li><a href="#sobre">Equipe</a></li>
-        <li><a href="#apoiar" class="btn-apoie">APOIE</a></li>
+        <li><a href="#apoiar" class="link-apoio">APOIE</a></li>
       </ul>
     </nav>
   </header>
 
-  <section id="hero" class="hero">
-    <div class="hero-overlay"></div>
-    <div class="hero-content">
-      <h1 class="hero-title">
-        <span class="hero-line1">Plataforma Livre</span>
-        <span class="hero-line2">Nação Yuxibu</span>
-      </h1>
-      <p class="hero-subtitle">
-        Verdade em unidade: do coração da floresta para o mundo!</p>
-      <a href="#apoiar" class="cta-button">Apoie a Construção da plataforma</a>
-    </div>
-  </section>
+  <main>
+    <!-- Hero -->
+    <section id="hero" class="secao-hero">
+      <div class="fundo-hero"></div>
+      <div class="conteudo-hero">
+        <h1 class="titulo-hero">
+          <span class="linha-hero-1">Plataforma Livre</span>
+          <span class="linha-hero-2">Nação Yuxibu</span>
+        </h1>
+        <p class="subtitulo-hero">
+          Verdade em unidade: do coração da floresta para o mundo!
+        </p>
+        <a href="#apoiar" class="botao-chamada">Apoie a Construção da plataforma</a>
+      </div>
+    </section>
 
-  <section id="manifesto">
-    <div class="container">
-      <div class="manifesto-grid">
-        <div class="manifesto-text">
-          <h2 class="title-manifesto">Manifesto</h2>
-          <p class="manifesto-paragraf">
-            O ciberespaço também é território!
-          </p>
-          <p class="manifesto-paragraf">
-            Defendemos que os povos originários ocupem e transformem o ambiente virtual a partir de seus próprios
-            conhecimentos, fortalecendo suas tradições, modos de vida e luta por direitos.
-          </p>
-          <br>
-          <p class="manifesto-paragraf">
-            A Plataforma Livre Nação Yuxibu, ao ser desenvolvida como <em>Software Livre</em>, afirma o protagonismo
-            indígena e mostra como é possível o uso inclusivo das tecnologias digitais, nas quais a autonomia, a
-            identidade e o saber ancestral se fazem presentes.</p>
+    <!-- Manifesto -->
+    <section id="manifesto" class="secao-manifesto">
+      <div class="container">
+        <div class="grade-manifesto">
+          <div class="texto-manifesto">
+            <h2 class="titulo-manifesto">Manifesto</h2>
+            <p class="paragrafo-manifesto">O ciberespaço também é território!</p>
+            <p class="paragrafo-manifesto">
+              Defendemos que os povos originários ocupem e transformem o ambiente virtual a partir de seus próprios
+              conhecimentos, fortalecendo suas tradições, modos de vida e luta por direitos.
+            </p>
+            <p class="paragrafo-manifesto">
+              A Plataforma Livre Nação Yuxibu, ao ser desenvolvida como <em>Software Livre</em>, afirma o protagonismo
+              indígena e mostra como é possível o uso inclusivo das tecnologias digitais, nas quais a autonomia, a
+              identidade e o saber ancestral se fazem presentes.
+            </p>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-
-
-  <section id="povo" class="povo-section">
-    <div class="container">
-      <h2 class="povo-title">Povo Huni Kuī</h2>
-
-      <div class="swiper povo-carousel">
-        <div class="swiper-wrapper">
-
-          <div class="swiper-slide">
-            <video class="video-player" controls>
-              <source src="./videos/VideoIbã.mp4" type="video/mp4">
-              Seu navegador não suporta o elemento de vídeo.
-            </video>
+    <!-- Povo Huni Kuī -->
+    <section id="povo" class="secao-povo">
+      <div class="container">
+        <h2 class="titulo-povo">Povo Huni Kuī</h2>
+        <div class="swiper carrossel-povo">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <video class="player-video" controls>
+                <source src="./videos/VideoIbã.mp4" type="video/mp4">
+                Seu navegador não suporta o elemento de vídeo.
+              </video>
+            </div>
+            <div class="swiper-slide">
+              <video class="player-video" controls>
+                <source src="./videos/gravacaoTela.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="swiper-slide">
+              <video class="player-video" controls>
+                <source src="./videos/VideoIbã.mp4" type="video/mp4">
+              </video>
+            </div>
           </div>
-
-          <div class="swiper-slide">
-            <video class="video-player" controls>
-              <source src="./videos/gravacaoTela.mp4" type="video/mp4">
-            </video>
-          </div>
-
-          <div class="swiper-slide">
-            <video class="video-player" controls>
-              <source src="./videos/VideoIbã.mp4" type="video/mp4">
-            </video>
-          </div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-pagination"></div>
         </div>
-
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
-
-        <div class="swiper-pagination"></div>
       </div>
-    </div>
-  </section>
+    </section>
 
+    <!-- Coletivo (capa) -->
+    <section id="movimento" class="secao-coletivo">
+      <div class="container">
+        <h2 class="titulo-movimento">O Coletivo Nação Yuxibu</h2>
+      </div>
+    </section>
 
-  <section id="movimento" class="coletivo-section">
-    <div class="container">
-      <h2 class="movimento-title">O Coletivo Nação Yuxibu</h2>
-    </div>
-  </section>
-
-
-  <section id="movimento2" class="cards-section2">
-    <div class="container">
-      <p class="movimento-paragrafo">
-        A Nação Yuxibu é um coletivo que atua a partir do protagonismo indígena, integrando saberes ancestrais, cuidado
-        ético e articulação cultural, educacional e tecnológica. Promove acolhimento digno, vivências e ações
-        comprometidas com as tradições e os valores do povo Huni Kuī.
-      </p>
-      <div class="movimento-carousel-wrapper">
-        <button class="movimento-btn movimento-btn-prev">❮</button>
-        <div class="cards-grid-movimento-grid" id="movimentoGrid">
-          <div class="card-movimento-card">
-            <div class="card-inner">
-              <div class="card-front">
-                <div class="card-image">
-                  <div class="slide" style="background-image: url('./Fotos/PovoHuniKui.jpeg');"></div>
+    <!-- Cards do Coletivo -->
+    <section id="movimento-cards" class="secao-cards-movimento">
+      <div class="container">
+        <p class="paragrafo-movimento">
+          A Nação Yuxibu é um coletivo que atua a partir do protagonismo indígena, integrando saberes ancestrais, cuidado
+          ético e articulação cultural, educacional e tecnológica. Promove acolhimento digno, vivências e ações
+          comprometidas com as tradições e os valores do povo Huni Kuī.
+        </p>
+        <div class="envoltorio-carrossel-movimento">
+          <button class="botao-movimento botao-movimento-anterior">❮</button>
+          <div class="grade-cards-movimento" id="gradeMovimento">
+            <!-- Card 1 -->
+            <div class="card-movimento">
+              <div class="card-interno">
+                <div class="card-frente">
+                  <div class="imagem-card" style="background-image: url('./Fotos/PovoHuniKui.jpeg');"></div>
+                  <h3>Acolhimento Indígena</h3>
                 </div>
-                <h3>Acolhimento Indígena</h3>
-              </div>
-              <div class="card-back">
-                <h3>Acolhimento Indígena</h3>
-                <p>O acolhimento indígena garante condições adequadas, seguras e respeitosas para a presença dos povos
-                  originários na troca intercultural, preservando a autonomia e os modos tradicionais de condução nas
-                  suas atividades. Todo o processo é orientado com responsabilidade e ética.</p>
-              </div>
-            </div>
-            <button class="card-toggle-btn" type="button" aria-expanded="false">Saiba mais</button>
-          </div>
-          <div class="card-movimento-card">
-            <div class="card-inner">
-              <div class="card-front">
-                <div class="card-image">
-                  <div class="slide" style="background-image: url('./Fotos/PovoHuniKui2.jpeg');"></div>
+                <div class="card-verso">
+                  <h3>Acolhimento Indígena</h3>
+                  <p>O acolhimento indígena garante condições adequadas, seguras e respeitosas para a presença dos povos originários na troca intercultural, preservando a autonomia e os modos tradicionais de condução nas suas atividades.</p>
                 </div>
-                <h3>Cerimônias Tradicionais</h3>
               </div>
-              <div class="card-back">
-                <h3>Cerimônias Tradicionais</h3>
-                <p>As cerimônias conduzidas pelo povo Huni Kui são rituais ancestrais de aprendizado e reconexão com os
-                  saberes originários e o sagrado. Cada cerimônia acontece a partir da tradição viva e da
-                  responsabilidade e compromisso com o cuidado coletivo.</p>
-              </div>
+              <button class="botao-alternar-card" type="button" aria-expanded="false">Saiba mais</button>
             </div>
-            <button class="card-toggle-btn" type="button" aria-expanded="false">Saiba mais</button>
-          </div>
-          <div class="card-movimento-card">
-            <div class="card-inner">
-              <div class="card-front">
-                <div class="card-image">
-                  <div class="slide" style="background-image: url('./Fotos/vivencia.JPEG');"></div>
+            <!-- Card 2 -->
+            <div class="card-movimento">
+              <div class="card-interno">
+                <div class="card-frente">
+                  <div class="imagem-card" style="background-image: url('./Fotos/PovoHuniKui2.jpeg');"></div>
+                  <h3>Cerimônias Tradicionais</h3>
                 </div>
-                <h3>Vivência Integrativa</h3>
-              </div>
-              <div class="card-back">
-                <h3>Vivência Integrativa</h3>
-                <p>As vivências integrativas são experiências cuidadosamente conduzidas que preparam e organizam o campo
-                  físico, emocional e relacional dos participantes, anterior às cerimônias.</p>
-                <p>
-                  Por meio de práticas corporais, sensoriais e de consciência, facilitam o enraizamento, a abertura
-                  perceptiva e a integração profunda da experiência que será vivida na cerimônia tradicional Huni Kui.
-                </p>
-              </div>
-            </div>
-            <button class="card-toggle-btn" type="button" aria-expanded="false">Saiba mais</button>
-          </div>
-          <div class="card-movimento-card">
-            <div class="card-inner">
-              <div class="card-front">
-                <div class="card-image">
-                  <div class="slide" style="background-image: url('./Fotos/vivencia.JPEG');"></div>
+                <div class="card-verso">
+                  <h3>Cerimônias Tradicionais</h3>
+                  <p>As cerimônias conduzidas pelo povo Huni Kui são rituais ancestrais de aprendizado e reconexão com os saberes originários e o sagrado.</p>
                 </div>
-                <h3>Cuidado e Ética</h3>
               </div>
-              <div class="card-back">
-                <h3>Cuidado e Ética</h3>
-                <p>O cuidado com os participantes é orientado por princípios éticos e prevenção de riscos, respeitando o
-                  bem-estar físico e emocional. </p>
-                <p>
-                  Antes das cerimônias, são realizadas anamneses e entrevistas com escuta atenta e responsável,
-                  conduzidas por profissionais qualificados, garantindo sigilo das informações, compreensão dos limites
-                  e suporte adequado ao longo de todo o processo.
-                </p>
-              </div>
+              <button class="botao-alternar-card" type="button" aria-expanded="false">Saiba mais</button>
             </div>
-            <button class="card-toggle-btn" type="button" aria-expanded="false">Saiba mais</button>
-          </div>
-          <div class="card-movimento-card">
-            <div class="card-inner">
-              <div class="card-front">
-                <div class="card-image">
-                  <div class="slide" style="background-image: url('./Fotos/articulacao.png');"></div>
+            <!-- Card 3 -->
+            <div class="card-movimento">
+              <div class="card-interno">
+                <div class="card-frente">
+                  <div class="imagem-card" style="background-image: url('./Fotos/vivencia.JPEG');"></div>
+                  <h3>Vivência Integrativa</h3>
                 </div>
-                <h3>Articulação Cultural </h3>
+                <div class="card-verso">
+                  <h3>Vivência Integrativa</h3>
+                  <p>As vivências integrativas são experiências cuidadosamente conduzidas que preparam e organizam o campo físico, emocional e relacional dos participantes.</p>
+                </div>
               </div>
-              <div class="card-back">
-                <h3>Articulação Cultural </h3>
-                <p>A articulação cultural promove o intercâmbio entre os saberes tradicionais indígenas, as instituições
-                  educacionais e a sociedade civil, a fim de promover a produção artística e difusão dos conhecimentos
-                  dos povos originários através da construção de redes, projetos de pesquisa e extensão, apresentações,
-                  exposições, aulas e vivências que visem proporcionar uma troca de estudos e experiências.</p>
+              <button class="botao-alternar-card" type="button" aria-expanded="false">Saiba mais</button>
+            </div>
+            <!-- Card 4 -->
+            <div class="card-movimento">
+              <div class="card-interno">
+                <div class="card-frente">
+                  <div class="imagem-card" style="background-image: url('./Fotos/vivencia.JPEG');"></div>
+                  <h3>Cuidado e Ética</h3>
+                </div>
+                <div class="card-verso">
+                  <h3>Cuidado e Ética</h3>
+                  <p>O cuidado com os participantes é orientado por princípios éticos e prevenção de riscos.</p>
+                </div>
+              </div>
+              <button class="botao-alternar-card" type="button" aria-expanded="false">Saiba mais</button>
+            </div>
+            <!-- Card 5 -->
+            <div class="card-movimento">
+              <div class="card-interno">
+                <div class="card-frente">
+                  <div class="imagem-card" style="background-image: url('./Fotos/articulacao.png');"></div>
+                  <h3>Articulação Cultural</h3>
+                </div>
+                <div class="card-verso">
+                  <h3>Articulação Cultural</h3>
+                  <p>A articulação cultural promove o intercâmbio entre saberes tradicionais indígenas, instituições educacionais e a sociedade civil.</p>
+                </div>
+              </div>
+              <button class="botao-alternar-card" type="button" aria-expanded="false">Saiba mais</button>
+            </div>
+          </div>
+          <button class="botao-movimento botao-movimento-proximo">❯</button>
+        </div>
+        <div class="paginacao-movimento" id="paginacaoMovimento"></div>
+      </div>
+    </section>
+
+    <!-- Plataforma (capa) -->
+    <section id="plataforma" class="secao-plataforma-capa">
+      <div class="container">
+        <h2 class="titulo-plataforma">Plataforma em Construção</h2>
+        <a href="#apoiar" class="botao-chamada">Apoie a Construção da plataforma</a>
+      </div>
+    </section>
+
+    <!-- Pilares da Plataforma -->
+    <section id="plataforma-pilares" class="secao-pilares">
+      <div class="container">
+        <p class="paragrafo-plataforma">
+          A Plataforma Livre Nação Yuxibu consiste no desenvolvimento de uma plataforma online, na modalidade software livre, cujo propósito é apoiar indígenas da etnia Huni KuĪ no compartilhamento da cosmovisão de seu povo.
+        </p>
+        <div class="grade-pilares">
+          <!-- Pilar 1 -->
+          <div class="pilar">
+            <div class="pilar-interno">
+              <div class="pilar-frente">
+                <div class="imagem-pilar" style="background-image: url('./Fotos/CULTURAL.png');"></div>
+                <h4>Cultural</h4>
+              </div>
+              <div class="pilar-verso">
+                <h4>Cultural</h4>
+                <p>Divulgação do cronograma de atividades culturais e acervo documental.</p>
               </div>
             </div>
-            <button class="card-toggle-btn" type="button" aria-expanded="false">Saiba mais</button>
+            <button class="botao-alternar-pilar" type="button" aria-expanded="false">Saiba mais</button>
           </div>
-        </div>
-        <button class="movimento-btn movimento-btn-next">❯</button>
-      </div>
-      <div class="movimento-pagination" id="movimentoPagination"></div>
-    </div>
-  </section>
-
-
-  <section id="plataforma" class="plataforma-section">
-    <div class="container">
-      <h2 class="plataforma-title">Plataforma em Construção</h2>
-      <br>
-      <br>
-      <a href="#apoiar" class="cta-button">Apoie a Construção da plataforma</a>
-    </div>
-  </section>
-
-  <section id="plataforma2" class="plataforma-cards-section">
-    <div class="container">
-      <p class="plataforma-paragrafo">
-        A Plataforma Livre Nação Yuxibu consiste no desenvolvimento de uma plataforma online, na modalidade software
-        livre, cujo propósito é apoiar, por meio de tecnologias digitais, indígenas da etnia Huni KuĪ originários da
-        Floresta Amazônica, no movimento de compartilhamento da cosmovisão de seu povo em relação à forma de viver
-        humana e dos direitos da natureza.
-      </p>
-      <p class="plataforma-paragrafo">
-        As funcionalidades da Plataforma Livre Nação Yuxibu são categorizadas em quatro áreas essenciais:
-      </p>
-      <div class="pilares-grid">
-        <div class="pilar">
-          <div class="pilar-inner">
-            <div class="pilar-front">
-              <div class="pilar-imagem" style="background-image: url('./Fotos/CULTURAL.png');"></div>
-              <h4>Cultural</h4>
+          <!-- Pilar 2 -->
+          <div class="pilar">
+            <div class="pilar-interno">
+              <div class="pilar-frente">
+                <div class="imagem-pilar" style="background-image: url('./Fotos/SOCIOAMBIENTAL.png');"></div>
+                <h4>Socioambiental</h4>
+              </div>
+              <div class="pilar-verso">
+                <h4>Socioambiental</h4>
+                <p>Interação entre membros para trocas de serviços e experiências.</p>
+              </div>
             </div>
-            <div class="pilar-back">
-              <h4>Cultural</h4>
-              <p>Divulgação do cronograma de atividades culturais planejadas e a construção de um acervo para documentar práticas e atividades realizadas.</p>
-            </div>
+            <button class="botao-alternar-pilar" type="button" aria-expanded="false">Saiba mais</button>
           </div>
-          <button class="pilar-toggle-btn" type="button" aria-expanded="false">Saiba mais</button>
-        </div>
-        <div class="pilar">
-          <div class="pilar-inner">
-            <div class="pilar-front">
-              <div class="pilar-imagem" style="background-image: url('./Fotos/SOCIOAMBIENTAL.png');"></div>
-              <h4>Socioambiental</h4>
+          <!-- Pilar 3 -->
+          <div class="pilar">
+            <div class="pilar-interno">
+              <div class="pilar-frente">
+                <div class="imagem-pilar" style="background-image: url('./Fotos/EDUCACIONAL.png');"></div>
+                <h4>Educacional</h4>
+              </div>
+              <div class="pilar-verso">
+                <h4>Educacional</h4>
+                <p>Espaço para aulas ministradas pelos próprios indígenas.</p>
+              </div>
             </div>
-            <div class="pilar-back">
-              <h4>Socioambiental</h4>
-              <p>Interação entre os membros para trocas de serviços e experiências, fortalecendo relações interculturais que criem novas formas de relações sociais e com a natureza.</p>
-            </div>
+            <button class="botao-alternar-pilar" type="button" aria-expanded="false">Saiba mais</button>
           </div>
-          <button class="pilar-toggle-btn" type="button" aria-expanded="false">Saiba mais</button>
-        </div>
-        <div class="pilar">
-          <div class="pilar-inner">
-            <div class="pilar-front">
-              <div class="pilar-imagem" style="background-image: url('./Fotos/EDUCACIONAL.png');"></div>
-              <h4>Educacional</h4>
+          <!-- Pilar 4 -->
+          <div class="pilar">
+            <div class="pilar-interno">
+              <div class="pilar-frente">
+                <div class="imagem-pilar" style="background-image: url('./Fotos/FINANCEIRO.png');"></div>
+                <h4>Financeira</h4>
+              </div>
+              <div class="pilar-verso">
+                <h4>Financeira</h4>
+                <p>Marketplace para arte indígena e doações.</p>
+              </div>
             </div>
-            <div class="pilar-back">
-              <h4>Educacional</h4>
-              <p>Espaço para a realização de aulas ministradas pelos próprios indígenas, bem como para fornecer treinamentos aos colaboradores.</p>
-            </div>
+            <button class="botao-alternar-pilar" type="button" aria-expanded="false">Saiba mais</button>
           </div>
-          <button class="pilar-toggle-btn" type="button" aria-expanded="false">Saiba mais</button>
-        </div>
-        <div class="pilar">
-          <div class="pilar-inner">
-            <div class="pilar-front">
-              <div class="pilar-imagem" style="background-image: url('./Fotos/FINANCEIRO.png');"></div>
-              <h4>Financeira</h4>
-            </div>
-            <div class="pilar-back">
-              <h4>Financeira</h4>
-              <p>Espaço livre e seguro para os indígenas venderem sua arte, artesanato e objetos diversos (marketplace), além de viabilizar doações, em consonância aos princípios de economia criativa e sustentável.</p>
-            </div>
-          </div>
-          <button class="pilar-toggle-btn" type="button" aria-expanded="false">Saiba mais</button>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-
-  <section id="software-livre" class="software-livre-section">
-    <div class="container">
-      <h2 class="software-livre-title">
-        Por que Software Livre?
-      </h2>
-      <p class="software-livre-texto">
-        O software livre oferece uma oportunidade poderosa para que as comunidades indígenas e outros grupos
-        subalternizados personalizem a tecnologia de acordo com suas realidades culturais e sociais. Além disso, o uso
-        do software livre pode fortalecer redes colaborativas, já que seu desenvolvimento frequentemente se baseia no
-        compartilhamento de conhecimento e na cooperação entre diferentes povos e culturas. Dessa forma, ele se
-        apresenta como uma alternativa viável para enfrentar as desigualdades impostas pelo chamado colonialismo
-        digital, abrindo caminhos para uma tecnologia verdadeiramente inclusiva e participativa.
-      </p>
-
-      <details>
-        <summary class="software-livre-texto">Saiba mais</summary>
-        <p class="software-livre-texto">
-          O acesso à educação, à informação e à disseminação do conhecimento estão fundamentalmente relacionados aos
-          movimentos de tecnologias abertas. Dentre esses movimentos, o movimento de Software Livre é o que mais se
-          destaca. Considera-se que a adoção de softwares livres em prol do desenvolvimento humano com igualdade e
-          equidade, é uma alternativa ao acesso democrático às tecnologias, dado que o software livre é aquele
-          disponível
-          com a permissão para qualquer um usá-lo, estudá-lo, copiá-lo, e distribuí-lo, seja na sua forma original ou
-          com
-          modificações, seja gratuitamente ou com custo (STALLMAN, 2002).
-        </p>
-
-        <p class="software-livre-texto">
-          Em um contexto social dominado pela plataformização do viver humano, a Plataforma Livre Nação Yuxibu, ao ser
-          desenvolvida como software livre, com servidor de dados próprio (um espaço de disco no servidor da UFBA), para
-          fins específicos, traz um importante resultado em mostrar como é possível uma outra forma de uso das
-          tecnologias
-          digitais, onde a autonomia se faz presente.
-        </p>
-        <P>
-          Referência:
-          STALLMAN, R. (2002). Free Software, Free Society: Selected Essays of Richard M. Stallman. Boston: GNU Press.
-        </P>
-      </details>
-
-    </div>
-
-    <div class="container">
-      <h2 class="pesquisa-extensao-title">
-        Projeto de Pesquisa e Extensão
-      </h2>
-      <p class="software-livre-texto">
-        Desenvolvemos pesquisa no processo de adoção de um modelo de design semioparticipativo para garantir que a
-        Plataforma Livre Nação Yuxibu não só atenda às necessidades específicas dos usuários, mas também respeite suas
-        práticas culturais e promova um ambiente colaborativo.</p>
-
-      <p class="software-livre-texto">
-        A construção de uma interface que segue a metodologia de design semioparticipativo vai para além do processo de
-        “fazer para”, em direção ao processo de “fazer com”.
-      </p>
-
-      <p class="software-livre-texto">
-        O projeto conta com apoio dos Editais da <a href="#">UFBA PAEx 2025</a> e <a href="#">Pibiex 2025</a>, com
-        financiamento de 2 bolsas de extensão
-        universitária.
-      </p>
-
-      <details>
-        <summary class="software-livre-texto">Saiba mais</summary>
-        <p class="software-livre-texto">
-          A plataforma está sendo concebida de forma a servir de base para que outros povos tradicionais possam utilizar
-          do modelo desenvolvido com o mesmo propósito de difusão de suas cosmovisões.
-        </p>
-
-        <p class="software-livre-texto">
-          Também, serão desenvolvidas capacitações no uso da tecnologia digital, fortalecendo o caráter extensionista do
-          projeto.
-        </p>
-
-        <p class="software-livre-texto">
-          Outro diferencial desta plataforma é ser um local seguro para acesso ao conhecimento, saberes e produtos dos
-          povos Huni Kuin, por ser uma rede formada e gerida por indígenas e colaboradores que darão credibilidade ao
-          que
-          estará sendo publicado e difundido no ambiente digital.
-        </p>
-
-        <p class="software-livre-texto">
-          Esse projeto está sendo desenvolvido por uma equipe de pesquisadores, estudantes e voluntários integrantes do
-          Grupo de Pesquisa e Extensão em Informática, Educação e Sociedade – Onda Digital, do Departamento de
-          Computação
-          Interdisciplinar do Instituto de Computação da UFBA, como atividade de pesquisa e extensão do Núcleo de
-          Desenvolvimento de Software Livre (NuSoL) em cooperação com o SPIDeLab - Semio-Participatory Interaction
-          Design
-          Research Laboratory da USP.
-        </p>
-
-      </details>
-
-    </div>
-  </section>
-
-    <section id="sobre" class="equipe-section">
-    <div class="container">
-      <div class="sobre-header">
-        <h2 class="equipe-title">Nossa Equipe</h2>
-        <p class="sobre-descricao">
-          A Plataforma Livre Nação Yuxibu nasce da articulação entre
-          povos indígenas, Universidade e sociedade civil, fortalecendo a conexão floresta-cidade
-          por meio de tecnologia ética e governança colaborativa.
-        </p>
+    <!-- Software Livre e Pesquisa -->
+    <section id="software-livre" class="secao-software-livre">
+      <div class="container">
+        <h2 class="titulo-software-livre">Por que Software Livre?</h2>
+        <p class="texto-software-livre">O software livre oferece uma oportunidade poderosa para que as comunidades indígenas personalizem a tecnologia de acordo com suas realidades culturais e sociais.</p>
+        <details>
+          <summary class="texto-software-livre sumario">Saiba mais</summary>
+          <p class="texto-software-livre">O acesso à educação, à informação e à disseminação do conhecimento estão fundamentalmente relacionados aos movimentos de tecnologias abertas...</p>
+          <p class="referencia">Referência: STALLMAN, R. (2002). Free Software, Free Society. Boston: GNU Press.</p>
+        </details>
       </div>
+      <div class="container">
+        <h2 class="titulo-pesquisa">Projeto de Pesquisa e Extensão</h2>
+        <p class="texto-software-livre">Desenvolvemos pesquisa no processo de adoção de um modelo de design semioparticipativo...</p>
+        <p class="texto-software-livre">O projeto conta com apoio dos Editais da <a href="#">UFBA PAEx 2025</a> e <a href="#">Pibiex 2025</a>.</p>
+        <details>
+          <summary class="texto-software-livre sumario">Saiba mais</summary>
+          <p class="texto-software-livre">A plataforma está sendo concebida de forma a servir de base para outros povos tradicionais...</p>
+        </details>
+      </div>
+    </section>
 
-      <div class="equipe-showcase">
-        <div class="equipe-carousel-shell">
-          <div class="swiper equipe-carousel">
-            <div class="swiper-wrapper">
-          <div class="swiper-slide equipe-slide">
-            <article class="equipe-photo-card" data-member-id="allan-thales" data-member-name="Allan Thales" data-member-role="analista de TI" data-member-description="Perfil em atualização pela equipe." data-member-image="./Membros/Allan.jpeg" data-member-alt="Allan Thales">
-              <img src="./Membros/Allan.jpeg" alt="Allan Thales" loading="lazy">
-              <button class="equipe-more-btn" type="button" aria-label="Saiba mais sobre Allan Thales" aria-controls="equipeDetailCard" aria-pressed="false">+</button>
-            </article>
-          </div>
-          <div class="swiper-slide equipe-slide">
-            <article class="equipe-photo-card" data-member-id="aurelio-heckert" data-member-name="Aurélio Heckert" data-member-role="Programador" data-member-description="Perfil em atualização pela equipe." data-member-image="./Membros/Aurelio.jpeg" data-member-alt="Aurélio Heckert">
-              <img src="./Membros/Aurelio.jpeg" alt="Aurélio Heckert" loading="lazy">
-              <button class="equipe-more-btn" type="button" aria-label="Saiba mais sobre Aurélio Heckert" aria-controls="equipeDetailCard" aria-pressed="false">+</button>
-            </article>
-          </div>
-          <div class="swiper-slide equipe-slide">
-            <article class="equipe-photo-card" data-member-id="caio-almeida" data-member-name="Caio Almeida" data-member-role="Engenheiro de software" data-member-description="Perfil em atualização pela equipe." data-member-image="./Membros/Caio.jpeg" data-member-alt="Caio almeida">
-              <img src="./Membros/Caio.jpeg" alt="Caio almeida" loading="lazy">
-              <button class="equipe-more-btn" type="button" aria-label="Saiba mais sobre Caio Almeida" aria-controls="equipeDetailCard" aria-pressed="false">+</button>
-            </article>
-          </div>
-          <div class="swiper-slide equipe-slide">
-            <article class="equipe-photo-card" data-member-id="debora-abdalla" data-member-name="Débora Abdalla" data-member-role="Coordenação Geral" data-member-description="Professora Doutora Titular do Departamento de Computação Interdisciplinar da UFBA e coordenadora do projeto Plataforma Livre Nação Yuxibu." data-member-image="./Membros/Debora.jpeg" data-member-alt="Débora Abdalla Santos">
-              <img src="./Membros/Debora.jpeg" alt="Débora Abdalla Santos" loading="lazy">
-              <button class="equipe-more-btn" type="button" aria-label="Saiba mais sobre Débora Abdalla" aria-controls="equipeDetailCard" aria-pressed="false">+</button>
-            </article>
-          </div>
-          <div class="swiper-slide equipe-slide">
-            <article class="equipe-photo-card" data-member-id="diego-zabot" data-member-name="Diego Zabot" data-member-role="Pesquisador IHC" data-member-description="Professor Doutor - UFBA" data-member-image="./Membros/Diego.jpeg" data-member-alt="Diego Zabot">
-              <img src="./Membros/Diego.jpeg" alt="Diego Zabot" loading="lazy">
-              <button class="equipe-more-btn" type="button" aria-label="Saiba mais sobre Diego Zabot" aria-controls="equipeDetailCard" aria-pressed="false">+</button>
-            </article>
-          </div>
-          <div class="swiper-slide equipe-slide">
-            <article class="equipe-photo-card" data-member-id="emily-mendes" data-member-name="Emily Mendes" data-member-role="Psicóloga" data-member-description="Psicóloga (CRP 03/29752). Atua no cuidado ético e acompanhamento dos participantes da Nação Yuxibu, realizando anamneses, entrevistas e orientações prévias." data-member-image="./Membros/Emily.jpg" data-member-alt="Emily Mendes">
-              <img src="./Membros/Emily.jpg" alt="Emily Mendes" loading="lazy">
-              <button class="equipe-more-btn" type="button" aria-label="Saiba mais sobre Emily Mendes" aria-controls="equipeDetailCard" aria-pressed="false">+</button>
-            </article>
-          </div>
-          <div class="swiper-slide equipe-slide">
-            <article class="equipe-photo-card" data-member-id="gabriela-almeida" data-member-name="Gabriela Almeida" data-member-role="Bolsista de extensão" data-member-description="Pesquisadora do grupo de desenvolvimento da Plataforma Livre Nação Yuxibu do Onda Digital." data-member-image="./Membros/Gabriela.jpeg" data-member-alt="Gabriela Almeida">
-              <img src="./Membros/Gabriela.jpeg" alt="Gabriela Almeida" loading="lazy">
-              <button class="equipe-more-btn" type="button" aria-label="Saiba mais sobre Gabriela Almeida" aria-controls="equipeDetailCard" aria-pressed="false">+</button>
-            </article>
-          </div>
-          <div class="swiper-slide equipe-slide">
-            <article class="equipe-photo-card" data-member-id="ise-prazeres" data-member-name="Ise Prazeres" data-member-role="Designer gráfico" data-member-description="Designer e profissional de marketing com 15 anos de caminhada criativa. Ao longo de sua trajetória vem desenvolvendo projetos gráficos que unem estratégia, sensibilidade e estética." data-member-image="./Membros/IsePrazeres.jpeg" data-member-alt="Ise Prazeres">
-              <img src="./Membros/IsePrazeres.jpeg" alt="Ise Prazeres" loading="lazy">
-              <button class="equipe-more-btn" type="button" aria-label="Saiba mais sobre Ise Prazeres" aria-controls="equipeDetailCard" aria-pressed="false">+</button>
-            </article>
-          </div>
-          <div class="swiper-slide equipe-slide">
-            <article class="equipe-photo-card" data-member-id="leonardo-cesar" data-member-name="Leonardo César" data-member-role="Desenvolvedor" data-member-description="Desenvolvedor de software e integrante do grupo de desenvolvimento da Plataforma Livre Nação Yuxibu." data-member-image="./Membros/Cesar.png" data-member-alt="Leonardo César">
-              <img src="./Membros/Cesar.png" alt="Leonardo César" loading="lazy">
-              <button class="equipe-more-btn" type="button" aria-label="Saiba mais sobre Leonardo César" aria-controls="equipeDetailCard" aria-pressed="false">+</button>
-            </article>
-          </div>
-          <div class="swiper-slide equipe-slide">
-            <article class="equipe-photo-card" data-member-id="pedro-tupinamba" data-member-name="Pedro Tupinambá" data-member-role="Bolsista de extensão" data-member-description="Pesquisador do grupo de desenvolvimento da Plataforma Livre Nação Yuxibu do Onda Digital." data-member-image="./Membros/Pedro.jpeg" data-member-alt="Pedro Tupinambá">
-              <img src="./Membros/Pedro.jpeg" alt="Pedro Tupinambá" loading="lazy">
-              <button class="equipe-more-btn" type="button" aria-label="Saiba mais sobre Pedro Tupinambá" aria-controls="equipeDetailCard" aria-pressed="false">+</button>
-            </article>
-          </div>
-          <div class="swiper-slide equipe-slide">
-            <article class="equipe-photo-card" data-member-id="solon" data-member-name="Solon" data-member-role="Indigenista" data-member-description="Coordenador da comunicação da Plataforma Livre Nação Yuxibu." data-member-image="./Membros/Solon.PNG" data-member-alt="Solón">
-              <img src="./Membros/Solon.PNG" alt="Solón" loading="lazy">
-              <button class="equipe-more-btn" type="button" aria-label="Saiba mais sobre Solon" aria-controls="equipeDetailCard" aria-pressed="false">+</button>
-            </article>
-          </div>
-          <div class="swiper-slide equipe-slide">
-            <article class="equipe-photo-card" data-member-id="thiago-magalhaes" data-member-name="Thiago Magalhães" data-member-role="Advogado" data-member-description="Bacharel em Direito e Licenciado em Filosofia pela Universidade Estadual de Santa Cruz - UESC/BA. Advogado OAB/BA 40748 e integrante do grupo de pesquisa da Plataforma Livre Nação Yuxibu." data-member-image="./Membros/Thiago.jpeg" data-member-alt="Thiago Magalhães">
-              <img src="./Membros/Thiago.jpeg" alt="Thiago Magalhães" loading="lazy">
-              <button class="equipe-more-btn" type="button" aria-label="Saiba mais sobre Thiago Magalhães" aria-controls="equipeDetailCard" aria-pressed="false">+</button>
-            </article>
-          </div>
-          <div class="swiper-slide equipe-slide">
-            <article class="equipe-photo-card" data-member-id="tulio-augustos" data-member-name="Túlio Augustos" data-member-role="Bolsista de extensão" data-member-description="Analista de sistema e pesquisador em Codesign, atua no grupo de Design e Desenvolvimento da Plataforma Livre Nação Yuxibu" data-member-image="./Membros/Tulio.jpeg" data-member-alt="Túlio Augustos">
-              <img src="./Membros/Tulio.jpeg" alt="Túlio Augustos" loading="lazy">
-              <button class="equipe-more-btn" type="button" aria-label="Saiba mais sobre Túlio Augustos" aria-controls="equipeDetailCard" aria-pressed="false">+</button>
-            </article>
-          </div>
-          <div class="swiper-slide equipe-slide">
-            <article class="equipe-photo-card" data-member-id="valeria-rosa" data-member-name="Valeria Rosa" data-member-role="pesquisadora ihc" data-member-description="Professora Doutora da UESB e integrante do grupo de pesquisa da Plataforma Livre Nação Yuxibu" data-member-image="./Membros/valeria.jpeg" data-member-alt="Valeria Rosa">
-              <img src="./Membros/valeria.jpeg" alt="Valeria Rosa" loading="lazy">
-              <button class="equipe-more-btn" type="button" aria-label="Saiba mais sobre Valeria Rosa" aria-controls="equipeDetailCard" aria-pressed="false">+</button>
-            </article>
-          </div>
+    <!-- Equipe -->
+    <section id="sobre" class="secao-equipe">
+      <div class="container">
+        <div class="cabecalho-equipe">
+          <h2 class="titulo-equipe">Nossa Equipe</h2>
+          <p class="descricao-equipe">A Plataforma Livre Nação Yuxibu nasce da articulação entre povos indígenas, Universidade e sociedade civil.</p>
+        </div>
+        <div class="mostruario-equipe">
+          <div class="envoltorio-carrossel-equipe">
+            <div class="swiper carrossel-equipe">
+              <div class="swiper-wrapper" id="listaMembrosEquipe">
+                <!-- Os cards de membros são gerados dinamicamente pelo script -->
+              </div>
+              <div class="paginacao-equipe"></div>
             </div>
-            <div class="equipe-swiper-pagination"></div>
           </div>
-        </div>
-
-        <article class="equipe-detail-card is-empty" id="equipeDetailCard" aria-live="polite">
-          <div class="equipe-detail-media">
-            <img id="equipeDetailImage" src="./Fotos/nacao yuxibu.png" alt="Símbolo da equipe Nação Yuxibu">
-          </div>
-          <div class="equipe-detail-content">
-            <span class="equipe-detail-label" id="equipeDetailLabel">Rede colaborativa</span>
-            <h3 class="equipe-detail-name" id="equipeDetailName">Pessoas que constroem esta plataforma</h3>
-            <p class="equipe-detail-role" id="equipeDetailRole">Toque no botão + de um retrato para abrir a apresentação individual.</p>
-            <p class="equipe-detail-text" id="equipeDetailText">A equipe reúne diferentes trajetórias e áreas de atuação, com uma presença visual mais leve no carrossel e um espaço de leitura focado quando você quiser conhecer melhor cada pessoa.</p>
-          </div>
-        </article>
-      </div>
-    </div>
-  </section>
-
-
-<section id="apoiar" class="apoio-section">
-    <div class="divisor-pincelada">
-      <img src="./Bordas/URUCUM2.png" alt="Borda pincelada">
-    </div>
-    <div class="container-apoio">
-      <h2 class="apoio-title">Caminhe Conosco!</h2>
-      <div class="apoio-options">
-        <div class="apoio-box">
-          <div class="apoio-imagem" style="background-image: url('./Fotos/FINANCIE.png');"></div>
-          <h4>Financie</h4>
-          <p>Apoie a contratação de programadores e viagens à aldeia.</p>
-        </div>
-        <div class="apoio-box">
-          <div class="apoio-imagem" style="background-image: url('./Fotos/COLABORE.png');"></div>
-          <h4>Colabore</h4>
-          <p>Divulgue os trabalhos do povo Huni Kuī.</p>
+          <article class="card-detalhe-equipe vazio" id="cardDetalheEquipe" aria-live="polite">
+            <div class="midia-detalhe-equipe">
+              <img id="imagemDetalheEquipe" src="./Fotos/nacao-yuxibu.png" alt="Símbolo da equipe Nação Yuxibu">
+            </div>
+            <div class="conteudo-detalhe-equipe">
+              <span class="categoria-detalhe-equipe" id="categoriaDetalheEquipe">Rede colaborativa</span>
+              <h3 class="nome-detalhe-equipe" id="nomeDetalheEquipe">Pessoas que constroem esta plataforma</h3>
+              <p class="cargo-detalhe-equipe" id="cargoDetalheEquipe">Toque no botão + de um retrato para abrir a apresentação individual.</p>
+              <p class="texto-detalhe-equipe" id="textoDetalheEquipe">A equipe reúne diferentes trajetórias e áreas de atuação.</p>
+            </div>
+          </article>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-   <footer>
+    <!-- Apoiar -->
+    <section id="apoiar" class="secao-apoio">
+      <div class="divisor-pincelada">
+        <img src="./Bordas/URUCUM2.png" alt="Borda pincelada">
+      </div>
+      <div class="container-apoio">
+        <h2 class="titulo-apoio">Caminhe Conosco!</h2>
+        <div class="opcoes-apoio">
+          <div class="caixa-apoio">
+            <div class="imagem-apoio" style="background-image: url('./Fotos/FINANCIE.png');"></div>
+            <h4>Financie</h4>
+            <p>Apoie a contratação de programadores e viagens à aldeia.</p>
+          </div>
+          <div class="caixa-apoio">
+            <div class="imagem-apoio" style="background-image: url('./Fotos/COLABORE.png');"></div>
+            <h4>Colabore</h4>
+            <p>Divulgue os trabalhos do povo Huni Kuī.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="rodape">
     <div class="container">
-      <!-- Realização -->
-      <div class="footer-brand">
+      <div class="marca-rodape">
         <h4>Realização</h4>
         <div class="logos-colaboradores">
-          <div class="logo-colaborador">
-            <img src="./icones-site/onda-digital.png" alt="Onda Digital">
-          </div>
-          <div class="logo-colaborador">
-            <img src="./icones-site/nacao-yuxibu-logo.png" alt="Nação Yuxibu">
-          </div>
-          <div class="logo-colaborador">
-            <img src="./icones-site/SPILab.png" alt="Nação Yuxibu">
-          </div>
+          <div class="logo-colaborador"><img src="./icones-site/onda-digital.png" alt="Onda Digital"></div>
+          <div class="logo-colaborador"><img src="./icones-site/nacao-yuxibu-logo.png" alt="Nação Yuxibu"></div>
+          <div class="logo-colaborador"><img src="./icones-site/SPILab.png" alt="SPILab"></div>
         </div>
       </div>
-
-      <!-- Apoio -->
-      <div class="footer-brand">
+      <div class="marca-rodape">
         <h4>Apoio</h4>
         <div class="logos-colaboradores">
-          <div class="logo-colaborador">
-            <img src="./icones-site/ufba-logo.png" alt="UFBA">
-          </div>
-          <div class="logo-colaborador">
-            <img src="./icones-site/proext-logo.png" alt="Proext">
-          </div>
+          <div class="logo-colaborador"><img src="./icones-site/ufba-logo.png" alt="UFBA"></div>
+          <div class="logo-colaborador"><img src="./icones-site/proext-logo.png" alt="Proext"></div>
         </div>
       </div>
-
-      <!-- Rodapé -->
-      <div class="footer-bottom">
-        <p class="legal">© 2026 Nação Yuxibu.</p>
+      <div class="base-rodape">
+        <p class="texto-legal">© 2026 Nação Yuxibu</p>
       </div>
     </div>
   </footer>
 
   <script src="script.js"></script>
-
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-  <script>
-    const povoSwiper = new Swiper('.povo-carousel', {
-      slidesPerView: 1,
-      spaceBetween: 30,
-      loop: true,
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-      },
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },
-      on: {
-        slideChange: function () {
-          const videos = document.querySelectorAll('video');
-          videos.forEach(video => video.pause());
-        },
-      },
-    });
-
-    if (document.querySelector('.equipe-carousel')) {
-      new Swiper('.equipe-carousel', {
-        slidesPerView: 1.9,
-        spaceBetween: 12,
-        speed: 900,
-        loop: true,
-        centeredSlides: false,
-        grabCursor: true,
-        autoplay: {
-          delay: 2600,
-          disableOnInteraction: false,
-          pauseOnMouseEnter: true,
-        },
-        pagination: {
-          el: '.equipe-swiper-pagination',
-          clickable: true,
-        },
-        breakpoints: {
-          360: {
-            slidesPerView: 2.2,
-            spaceBetween: 12,
-          },
-          480: {
-            slidesPerView: 2.8,
-            spaceBetween: 14,
-          },
-          768: {
-            slidesPerView: 4,
-            spaceBetween: 16,
-          },
-          1024: {
-            slidesPerView: 5,
-            spaceBetween: 18,
-          },
-          1280: {
-            slidesPerView: 6,
-            spaceBetween: 18,
-          },
-        },
-      });
-    }
-  </script>
 </body>
 
 </html>
